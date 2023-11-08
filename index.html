@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Random Number Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Number Generator</h1>
+
+        <label for="longAnswer">Enter your writing:</label>
+        <textarea id="longAnswer" rows="4" cols="50"></textarea><br>
+
+        <button id="generateButton">Generate AI Detection</button>
+
+        <p id="randomNumber"></p><p>Percent this was written by AI</p>
+    </div>
+
+    <script>
+        document.getElementById("generateButton").addEventListener("click", function() {
+            // Get the long answer from the text box
+            var longAnswer = document.getElementById("longAnswer").value;
+
+            // Generate a random number between 0 and 100
+            var randomNumber = Math.floor(Math.random() * 101);
+
+            // Display the random number
+            document.getElementById("randomNumber").textContent = "Random Number: " + randomNumber;
+        });
+    </script>
+</body>
+</html>
